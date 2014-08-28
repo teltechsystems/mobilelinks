@@ -21,7 +21,7 @@ curl -X POST http://localhost:8000/create \
     -d"ios=http://www.apple.com"
 > http://shrtnr.io/a3g
 
+curl --header "User-Agent: Safari" http://shrtnr.io/a3g # Redirects To google.com!
 curl --header "User-Agent: Android" http://shrtnr.io/a3g # Redirects To android.com!
 curl --header "User-Agent: iPod" http://shrtnr.io/a3g # Redirects To apple.com!
-curl --header "User-Agent: Safari" http://shrtnr.io/a3g # Redirects To google.com!
 ```
