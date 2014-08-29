@@ -23,6 +23,8 @@ func main() {
 	redisLinker := &RedisLinker{redisPool}
 
 	http.HandleFunc("/create", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("Access-Control-Allow-Origin", "*")
+
 		r.ParseForm()
 		link, err := redisLinker.CreateLink(Link{
 			Default: r.Form.Get("default"),
